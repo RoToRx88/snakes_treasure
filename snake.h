@@ -28,4 +28,11 @@ typedef struct s_snake
   char		map[18][18];
 }		t_snake;
 
+int		init_sdl(t_snake *snake);
+int		draw_map(t_snake *snake);
+void		main_loop(t_snake *snake);
+void		move_player(t_snake *snake, int motion);
+void		apply_surface(int x, int y, SDL_Surface *source, SDL_Surface *destination);
+SDL_Surface	*load_image(char *filename);
+
 #endif /*_SNAKE_H_*/
