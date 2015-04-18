@@ -13,7 +13,7 @@ int     init_sdl(t_snake *snake)
   if (!(snake->surfaces[PACMAN] = load_image("img/pacman.bmp"))) return 1;
   if (!(snake->surfaces[SNAKE] = load_image("img/snake.bmp"))) return 1;
   if (!(snake->surfaces[BACKGROUND] = load_image("img/background.bmp"))) return 1;
-  snake->player_pos_x = 1;
-  snake->player_pos_y = 1;
+  snake->player_pos_x = 3;
+  snake->player_pos_y = 4;
   return 0;
 }
