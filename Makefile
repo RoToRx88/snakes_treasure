@@ -1,7 +1,9 @@
 SRC	= main.c \
 	  move.c \
 	  init.c \
-	  sdl_game.c
+	  sdl_game.c \
+	  loot.c \
+	  game_ai.c
 
 NAME	= snake
 

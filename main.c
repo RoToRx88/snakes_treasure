@@ -23,7 +23,8 @@ void		main_loop(t_snake *snake)
 	default:
 	  ;
 	}
-        draw_map(snake);
+      if (check_if_win(snake)) printf("You win the game nigga !!!!\n");
+      draw_map(snake);
     }
 }
 int	main(int ac, char **av)
