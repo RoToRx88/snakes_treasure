@@ -1,6 +1,7 @@
 #include "snake.h"
 
-SDL_Surface     *load_image(char *filename)
+
+SDL_Surface *load_image(char *filename)
 {
   SDL_Surface* loadedImage = NULL;
   SDL_Surface* optimizedImage = NULL;
@@ -15,7 +16,7 @@ SDL_Surface     *load_image(char *filename)
 }
 
 
-void            apply_surface(int x, int y, SDL_Surface* source, SDL_Surface* destination)
+void apply_surface(int x, int y, SDL_Surface* source, SDL_Surface* destination)
 {
   SDL_Rect      offset;
 
@@ -24,14 +25,24 @@ void            apply_surface(int x, int y, SDL_Surface* source, SDL_Surface* de
   SDL_BlitSurface( source, NULL, destination, &offset );
 }
 
-void	display_loot(t_snake *snake)
+void display_loot(t_snake *snake)
 {
   int	i = -1;
 
   while (++i < 16)
     {
       if (snake->player_pos_x == snake->loot[i].pos_x && snake->player_pos_y == snake->loot[i].pos_y)
-	snake->loot[i].taked = 1;
+      {
+          snake->loot[i].taked = 1;
+           if (snake->loot[i].type == LIFE)
+           {
+               snake->life ++ ;
+           }
+           else
+           {
+               snake->score++;
+           }
+      }
       if (snake->loot[i].type == ORBE && snake->loot[i].taked == 0)
 	apply_surface(snake->loot[i].pos_x * 32, snake->loot[i].pos_y * 32,  snake->surfaces[BLUE_ORBE], snake->surfaces[SCREEN]);
       else if (snake->loot[i].type == LIFE && snake->loot[i].taked == 0)
@@ -39,7 +50,16 @@ void	display_loot(t_snake *snake)
     }
 }
 
-int     draw_map(t_snake *snake)
+/**
+@brief place les murs, le perso et les serpents sur le terrain
+@param snake est un pointeur de structure t_snake
+
+draw_map transforme les # par des murs et affiche le personnage et les serpents
+
+@return 1
+*/
+
+int draw_map(t_snake *snake)
 {
   int   i = -1;
   int   j = -1;
@@ -50,14 +70,16 @@ int     draw_map(t_snake *snake)
     {
       j = -1;
       while (++j < 18)
-        {
+    {
 	  /*check to display a wall*/
           if (snake->map[j][i] == '#') apply_surface(i * 32, j * 32, snake->surfaces[WALL], snake->surfaces[SCREEN]);
 	}
     }
   /*display all loots on the map*/
   display_loot(snake);
+  display_guardian(snake);
   /*display player on his pos*/
   apply_surface(snake->player_pos_x * 32, snake->player_pos_y * 32, snake->surfaces[PACMAN], snake->surfaces[SCREEN]);
   if(SDL_Flip(snake->surfaces[SCREEN]) == -1) return 1;
+  return 0;
 }
