@@ -4,14 +4,16 @@ SRC	= main.c \
 	  sdl_game.c \
 	  loot.c \
 	  game_ai.c \
-	  guardian.c
+	  guardian.c \
+	  guardian_move.c \
+	  life.c
 
 NAME	= snake
 
 OBJ	= $(SRC:.c=.o)
 
 #FLAG	= -Wextra -Werror -Wall -pthread -pedantic -ansi -O3
-FLAG	= -O3 -pthread -lSDL
+FLAG	= -O3 -lSDL
 
 all: $(NAME)
 

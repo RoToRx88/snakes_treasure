@@ -28,21 +28,11 @@ void apply_surface(int x, int y, SDL_Surface* source, SDL_Surface* destination)
 void display_loot(t_snake *snake)
 {
   int	i = -1;
-
+  
   while (++i < 16)
     {
       if (snake->player_pos_x == snake->loot[i].pos_x && snake->player_pos_y == snake->loot[i].pos_y)
-      {
-          snake->loot[i].taked = 1;
-           if (snake->loot[i].type == LIFE)
-           {
-               snake->life ++ ;
-           }
-           else
-           {
-               snake->score++;
-           }
-      }
+	snake->loot[i].taked = 1;
       if (snake->loot[i].type == ORBE && snake->loot[i].taked == 0)
 	apply_surface(snake->loot[i].pos_x * 32, snake->loot[i].pos_y * 32,  snake->surfaces[BLUE_ORBE], snake->surfaces[SCREEN]);
       else if (snake->loot[i].type == LIFE && snake->loot[i].taked == 0)
@@ -66,11 +56,15 @@ int draw_map(t_snake *snake)
 
   /*background first to avoid multiple image*/
   apply_surface(0, 0, snake->surfaces[BACKGROUND], snake->surfaces[SCREEN]);
+  calc_guardian_pos(snake);
+  check_guardian_collision(snake);
+  if (check_life(snake) == 1) return 1;
+  printf("life: %d\n", snake->life);
   while (++i < 18)
     {
       j = -1;
       while (++j < 18)
-    {
+	{
 	  /*check to display a wall*/
           if (snake->map[j][i] == '#') apply_surface(i * 32, j * 32, snake->surfaces[WALL], snake->surfaces[SCREEN]);
 	}

@@ -52,7 +52,7 @@ typedef struct		s_snake
   unsigned int		player_pos_y;
   char			map[18][18];
   t_loot		loot[16];
-  int			life;
+  size_t		life;
   int			score;
   t_guardian		guardian[4];
   size_t		guardian_size;
@@ -99,10 +99,10 @@ int			check_if_win(t_snake *snake);
 
 main_loop est la boucle du jeu qui permet le deplacement du perso et la fin du niveau
 
-@return none
+@return erreurs ou fin de jeu si mort
 */
 
-void			main_loop(t_snake *snake);
+int			main_loop(t_snake *snake);
 
 /**
 @brief déplace le personnage
@@ -141,5 +141,11 @@ generate_loot place les trésors et les vies dans les salles
 void			generate_loot(t_snake *snake);
 SDL_Surface		*load_image(char *filename);
 int			init_guardian(t_snake *snake, int i);
-
+int			check_life(t_snake *snake);
+void			display_guardian(t_snake *snake);
+void			calc_guardian_pos(t_snake *snake);
+void			guard_0(t_guardian *g);
+void			guard_1(t_guardian *g);
+void			guard_2(t_guardian *g);
+void			guard_3(t_guardian *g);
 #endif /*_SNAKE_H_*/

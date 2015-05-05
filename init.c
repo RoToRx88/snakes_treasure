@@ -54,11 +54,12 @@ int     init_sdl(t_snake *snake)
       return 1;
   }
   SDL_SetColorKey(snake->surfaces[HEART], SDL_SRCCOLORKEY, SDL_MapRGB(snake->surfaces[HEART]->format,255,255,255)) ;
-  snake->player_pos_x = 8;
-  snake->player_pos_y = 7;
+  snake->player_pos_x = 6;
+  snake->player_pos_y = 5;
+  snake->life = 1;
   generate_loot(snake);
   /*Set size of a guardian*/
-  snake->guardian_size = 4;
+  snake->guardian_size = 4; /*WARNING need to be between 0 and 8*/
   /*init chained list for all guardians*/
   for (i = 0; i < 4; ++i)
     {
