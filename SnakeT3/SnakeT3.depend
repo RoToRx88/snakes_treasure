@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/game_ai.c
+	"snake.h"
+
+1430807974 /home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/snake.h
+	<stdio.h>
+	<stdlib.h>
+	"SDL/SDL.h"
+
+1430808918 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/guardian.c
+	"snake.h"
+
+1430814075 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/guardian_move.c
+	"snake.h"
+
+1430812130 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/init.c
+	"snake.h"
+
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/life.c
+	"snake.h"
+
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/loot.c
+	"snake.h"
+
+1430816450 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/main.c
+	"snake.h"
+	<time.h>
+
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/move.c
+	"snake.h"
+
+1430815763 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV3/sdl_game.c
+	"snake.h"
+
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/game_ai.c
+	"snake.h"
+
+1431422731 /home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/snake.h
+	<stdio.h>
+	<stdlib.h>
+	"SDL/SDL.h"
+
+1431423896 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/guardian.c
+	"snake.h"
+
+1431414918 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/guardian_move.c
+	"snake.h"
+
+1431414946 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/init.c
+	"snake.h"
+
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/life.c
+	"snake.h"
+
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/loot.c
+	"snake.h"
+
+1430816450 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/main.c
+	"snake.h"
+	<time.h>
+
+1430807974 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/move.c
+	"snake.h"
+
+1431424219 source:/home/etu/n/p1316910/LIF7_td/snakes_treasure-masterV4/sdl_game.c
+	"snake.h"
+

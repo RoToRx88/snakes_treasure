@@ -1,5 +1,15 @@
 #include "snake.h"
 
+
+/**
+@brief affiche chaque partie des 4 serpents.
+@param snake est un pointeur de structure t_snake
+
+display_guardian affiche partie par partie (en fonction de la taille du serpent
+
+@return none
+*/
+
 void		display_guardian(t_snake *snake)
 {
   int		i = -1;
@@ -16,6 +26,15 @@ void		display_guardian(t_snake *snake)
     }
 }
 
+/**
+@brief vérifie s'il y a collision entre le joueur et les serpents.
+@param snake est un pointeur de structure t_snake
+
+check_guardian_collision vérifie la position du joueur par rapport à la position des serpents, et si elles sont semblables, la vie du personnage diminue de 1.
+
+@return 1
+*/
+
 int		check_guardian_collision(t_snake *snake)
 {
   t_guardian	*n;
@@ -29,6 +48,8 @@ int		check_guardian_collision(t_snake *snake)
 	  if (n->pos_x == snake->player_pos_x && n->pos_y == snake->player_pos_y)
 	    {
 	      snake->life -= 1;
+	      snake->player_pos_x = X_DEFAULT;
+	      snake->player_pos_y = Y_DEFAULT;
 	      return 1;
 	    }
 	  n = n->next;
@@ -36,16 +57,26 @@ int		check_guardian_collision(t_snake *snake)
     }
 }
 
+/**
+@brief initialise les serpents.
+@param snake est un pointeur de structure t_snake
+@param i entier qui prend comme valeur 0, 1, 2, 3 qui correspond au différent
+
+init_guardian initialise les 4 serpents au milieu du terrain.
+
+@return 1
+*/
+
 int		init_guardian(t_snake *snake, int i)
 {
   t_guardian	*n;
   int		j = -1;
   unsigned int          init_snake[4][8][2];
-  
+
   if (snake->guardian_size > 8) return 1;
   /*snake 0*/
-  init_snake[0][0][0] = 7;
-  init_snake[0][0][1] = 8;
+  init_snake[0][0][0] = 7; // init_snake[num snake][num part snake][pos_x] = coord x
+  init_snake[0][0][1] = 8; // init_snake[num snake][num part snake][pos_y] = coord y
   init_snake[0][1][0] = 6;
   init_snake[0][1][1] = 8;
   init_snake[0][2][0] = 5;

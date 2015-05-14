@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SnakeT3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SnakeT3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-lSDL" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SnakeT3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../game.h" />
+		<Unit filename="../game_ai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../guardian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../guardian.h" />
+		<Unit filename="../guardian_move.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../life.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../life.h" />
+		<Unit filename="../loot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../loot.h" />
+		<Unit filename="../main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../move.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../player.h" />
+		<Unit filename="../sdl_game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../sdl_game.h" />
+		<Unit filename="../snake.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

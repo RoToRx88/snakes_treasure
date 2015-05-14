@@ -4,6 +4,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include "SDL/SDL.h"
+# define X_DEFAULT 6
+# define Y_DEFAULT 5
 
 /*enum of SDL's surfaces*/
 enum {
@@ -13,7 +15,8 @@ enum {
   SNAKE,
   BACKGROUND,
   BLUE_ORBE,
-  HEART
+  HEART,
+  LEVELUP
 };
 
 /*enum for move_player function*/
@@ -47,7 +50,7 @@ typedef struct		s_guardian
 
 typedef struct		s_snake
 {
-  SDL_Surface		*surfaces[7];
+  SDL_Surface		*surfaces[8];
   unsigned int		player_pos_x;
   unsigned int		player_pos_y;
   char			map[18][18];
@@ -56,6 +59,7 @@ typedef struct		s_snake
   int			score;
   t_guardian		guardian[4];
   size_t		guardian_size;
+  float			clock_speed;
 }			t_snake;
 
 /**

@@ -1,5 +1,14 @@
 #include "snake.h"
 
+/**
+@brief permet de charger des image .bmp
+@param filename chaine de caractère (nom de fichier")
+
+
+SDL_Surface charge une image .bmp
+
+@return none
+*/
 
 SDL_Surface *load_image(char *filename)
 {
@@ -15,6 +24,17 @@ SDL_Surface *load_image(char *filename)
   return optimizedImage;
 }
 
+/**
+@brief
+@param x entier >0
+@param y entier >0
+@param source
+@param destination
+
+apply_surface applique une surface sur la fenêtre ????
+
+@return none
+*/
 
 void apply_surface(int x, int y, SDL_Surface* source, SDL_Surface* destination)
 {
@@ -25,10 +45,19 @@ void apply_surface(int x, int y, SDL_Surface* source, SDL_Surface* destination)
   SDL_BlitSurface( source, NULL, destination, &offset );
 }
 
+
+/**
+@brief affiche les butins non pris
+@param snake est un pointeur de structure t_snake
+
+display_loot affiche les butins et les coeurs non pris, si le personnage est sur une "case butin", alors le butin est pris et donc ne s'affiche plus.
+
+@return none
+*/
 void display_loot(t_snake *snake)
 {
   int	i = -1;
-  
+
   while (++i < 16)
     {
       if (snake->player_pos_x == snake->loot[i].pos_x && snake->player_pos_y == snake->loot[i].pos_y)
@@ -56,10 +85,8 @@ int draw_map(t_snake *snake)
 
   /*background first to avoid multiple image*/
   apply_surface(0, 0, snake->surfaces[BACKGROUND], snake->surfaces[SCREEN]);
-  calc_guardian_pos(snake);
-  check_guardian_collision(snake);
+  /*if 1 returned player have no more life, else he have at least 1 life*/
   if (check_life(snake) == 1) return 1;
-  printf("life: %d\n", snake->life);
   while (++i < 18)
     {
       j = -1;
@@ -76,4 +103,98 @@ int draw_map(t_snake *snake)
   apply_surface(snake->player_pos_x * 32, snake->player_pos_y * 32, snake->surfaces[PACMAN], snake->surfaces[SCREEN]);
   if(SDL_Flip(snake->surfaces[SCREEN]) == -1) return 1;
   return 0;
+}
+
+/**
+@brief affichage du menu
+@param snake est un pointeur de structure t_snake
+
+init_sdl affiche le menu. Il y a un une case "play". La surface du fond BACKROUND0 sera appliqué à la fenetre avec par dessus la surface de la case "play".
+
+@return 0
+*/
+
+void    menu(t_snake *snake)
+{
+}
+
+
+/**
+@brief initialisation du jeu
+@param snake est un pointeur de structure t_snake
+
+init_sdl initialise le jeu avec les images
+
+@return 0
+*/
+
+int     init_sdl(t_snake *snake)
+{
+  int	i;
+
+  printf("Initializing SDL.\n");
+  if (-1 == SDL_Init(SDL_INIT_EVERYTHING) ||
+      !(snake->surfaces[SCREEN] = SDL_SetVideoMode(576, 576, 16, SDL_HWSURFACE)))
+    {
+      printf("Unable to launch SDL; error: %s\n", SDL_GetError());
+      return 1;
+    }
+  SDL_WM_SetCaption("Snake's treasure", NULL);
+  if (!(snake->surfaces[WALL] = load_image("img/wall.bmp")))
+  {
+      printf("L'image du mur non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+  if (!(snake->surfaces[PACMAN] = load_image("img/pacman.bmp")))
+  {
+      printf("L'image du personnage non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+  // SDL_SetColorKey(snake->surfaces[PACMAN], SDL_SRCCOLORKEY, SDL_MapRGB(snake->surfaces[PACMAN]->format,255,255,255)) ;
+  if (!(snake->surfaces[SNAKE] = load_image("img/snake.bmp")))
+    {
+      printf("L'image du snake non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+  if (!(snake->surfaces[BACKGROUND] = load_image("img/background.bmp")))
+  {
+      printf("L'image du FOND (parce Maelle fait chier) non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+  if (!(snake->surfaces[BLUE_ORBE] = load_image("img/blue_orbe.bmp")))
+  {
+      printf("L'image du tresor (Blue_orbe) non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+  SDL_SetColorKey(snake->surfaces[BLUE_ORBE], SDL_SRCCOLORKEY, SDL_MapRGB(snake->surfaces[BLUE_ORBE]->format,255,255,255));
+  if (!(snake->surfaces[HEART] = load_image("img/heart.bmp")))
+  {
+      printf("L'image du coeur non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+  SDL_SetColorKey(snake->surfaces[HEART], SDL_SRCCOLORKEY, SDL_MapRGB(snake->surfaces[HEART]->format,255,255,255)) ;
+
+  /*level up*/
+  if (!(snake->surfaces[LEVELUP] = load_image("img/levelup.bmp")))
+  {
+      printf("L'image du level up non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+  SDL_SetColorKey(snake->surfaces[LEVELUP], SDL_SRCCOLORKEY, SDL_MapRGB(snake->surfaces[LEVELUP]->format,255,255,255)) ;
+
+  snake->player_pos_x = X_DEFAULT;
+  snake->player_pos_y = Y_DEFAULT;
+  snake->life = 1;
+  snake->clock_speed = 0.2f;
+  generate_loot(snake);
+  /*Set size of a guardian*/
+  snake->guardian_size = 1; /*WARNING need to be between 0 and 8*/
+  /*init chained list for all guardians*/
+  for (i = 0; i < 4; ++i)
+    {
+      if (init_guardian(snake, i)) {printf("[error] Error creating guardian;\n"); return 1;}
+    }
+  return 0;
+
+
 }
