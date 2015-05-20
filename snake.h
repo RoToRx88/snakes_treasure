@@ -16,7 +16,12 @@ enum {
   BACKGROUND,
   BLUE_ORBE,
   HEART,
-  LEVELUP
+  LEVELUP,
+  WIN,
+  LOSE,
+  TIMEOUT,
+  MENU,
+  LOGO
 };
 
 /*enum for move_player function*/
@@ -50,16 +55,16 @@ typedef struct		s_guardian
 
 typedef struct		s_snake
 {
-  SDL_Surface		*surfaces[8];
+  SDL_Surface		*surfaces[13];
   unsigned int		player_pos_x;
   unsigned int		player_pos_y;
   char			map[18][18];
   t_loot		loot[16];
   size_t		life;
-  int			score;
   t_guardian		guardian[4];
   size_t		guardian_size;
   float			clock_speed;
+  size_t		clock;
 }			t_snake;
 
 /**
@@ -152,4 +157,7 @@ void			guard_0(t_guardian *g);
 void			guard_1(t_guardian *g);
 void			guard_2(t_guardian *g);
 void			guard_3(t_guardian *g);
+int			check_guardian_collision(t_snake *snake);
+int			menu(t_snake *snake);
+int			init_values(t_snake *snake);
 #endif /*_SNAKE_H_*/

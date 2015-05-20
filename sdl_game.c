@@ -114,8 +114,28 @@ init_sdl affiche le menu. Il y a un une case "play". La surface du fond BACKROUN
 @return 0
 */
 
-void    menu(t_snake *snake)
+int    menu(t_snake *snake)
 {
+  SDL_Event     event;
+
+  apply_surface(0, 0, snake->surfaces[MENU], snake->surfaces[SCREEN]);
+  SDL_Flip(snake->surfaces[SCREEN]);
+  while (SDL_WaitEvent(&event))
+    {
+      printf("get event\n");
+      switch(event.type)
+        {
+        case SDL_QUIT:
+          return 1;
+          break;
+        case SDL_KEYDOWN:
+          if (event.key.keysym.sym == SDLK_p) return 0;
+          else if (event.key.keysym.sym == SDLK_q) return 1;
+          break;
+        default:;
+        }
+    }
+  return 0;
 }
 
 
@@ -130,10 +150,8 @@ init_sdl initialise le jeu avec les images
 
 int     init_sdl(t_snake *snake)
 {
-  int	i;
-
   printf("Initializing SDL.\n");
-  if (-1 == SDL_Init(SDL_INIT_EVERYTHING) ||
+  if (-1 == SDL_Init(SDL_INIT_VIDEO) ||
       !(snake->surfaces[SCREEN] = SDL_SetVideoMode(576, 576, 16, SDL_HWSURFACE)))
     {
       printf("Unable to launch SDL; error: %s\n", SDL_GetError());
@@ -180,12 +198,55 @@ int     init_sdl(t_snake *snake)
       printf("L'image du level up non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
       return 1;
   }
-  SDL_SetColorKey(snake->surfaces[LEVELUP], SDL_SRCCOLORKEY, SDL_MapRGB(snake->surfaces[LEVELUP]->format,255,255,255)) ;
+
+  /*win*/
+  if (!(snake->surfaces[WIN] = load_image("img/win.bmp")))
+  {
+      printf("L'image du win non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+
+  /*lose*/
+  if (!(snake->surfaces[LOSE] = load_image("img/lose.bmp")))
+  {
+      printf("L'image du lose non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+
+  /*time out*/
+  if (!(snake->surfaces[TIMEOUT] = load_image("img/timeout.bmp")))
+  {
+      printf("L'image du timeout non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+
+  /*menu*/
+  if (!(snake->surfaces[MENU] = load_image("img/menu.bmp")))
+  {
+      printf("L'image du menu non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+
+  /*logo*/
+  if (!(snake->surfaces[LOGO] = load_image("img/logo.bmp")))
+  {
+      printf("L'image du logo non trouvée. Maelle tu n'as pas mis les images au bon endroit :@");
+      return 1;
+  }
+
+  if (init_values(snake)) return 1;
+  return 0;
+}
+
+int	init_values(t_snake *snake)
+{
+  int	i;
 
   snake->player_pos_x = X_DEFAULT;
   snake->player_pos_y = Y_DEFAULT;
   snake->life = 1;
-  snake->clock_speed = 0.2f;
+  snake->clock_speed = 0.2;
+  snake->clock = 30; /*set startup clock in seconds*/
   generate_loot(snake);
   /*Set size of a guardian*/
   snake->guardian_size = 1; /*WARNING need to be between 0 and 8*/
@@ -195,6 +256,4 @@ int     init_sdl(t_snake *snake)
       if (init_guardian(snake, i)) {printf("[error] Error creating guardian;\n"); return 1;}
     }
   return 0;
-
-
 }

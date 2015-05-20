@@ -12,7 +12,7 @@ int	check_life(t_snake *snake)
 	  snake->loot[i].type == LIFE &&
 	  snake->loot[i].taked == 0)
 	{
-	  printf("Yeah, on more life found\n");
+	  printf("Yeah, one more life found\n");
 	  snake->life += 1;
 	}
     }

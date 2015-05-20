@@ -13,12 +13,12 @@ NAME	= snake
 OBJ	= $(SRC:.c=.o)
 
 #FLAG	= -Wextra -Werror -Wall -pthread -pedantic -ansi -O3
-FLAG	= -O3 -lSDL
+FLAG	= -O3   `sdl-config --libs`
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(FLAG) $(OBJ) -o $(NAME)
+	gcc $(OBJ) $(FLAG) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)

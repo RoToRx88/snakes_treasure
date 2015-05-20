@@ -55,6 +55,7 @@ int		check_guardian_collision(t_snake *snake)
 	  n = n->next;
 	}
     }
+    return 0;
 }
 
 /**
