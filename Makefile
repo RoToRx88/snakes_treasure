@@ -1,24 +1,19 @@
-SRC	= main.c \
-	  move.c \
-	  init.c \
-	  sdl_game.c \
-	  loot.c \
-	  game_ai.c \
-	  guardian.c \
-	  guardian_move.c \
-	  life.c
+SRC	= src/main.c \
+	  src/sdl_game.c \
+	  src/snake.c \
+	  src/guardian.c
 
-NAME	= snake
+NAME	= bin/snake
 
 OBJ	= $(SRC:.c=.o)
 
 #FLAG	= -Wextra -Werror -Wall -pthread -pedantic -ansi -O3
-FLAG	= -O3   `sdl-config --libs`
+FLAG	= -O3 -lSDL
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(OBJ) $(FLAG) -o $(NAME)
+	gcc $(FLAG) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)

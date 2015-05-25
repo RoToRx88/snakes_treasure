@@ -1,0 +1,4 @@
+<map id="s_snake" name="s_snake">
+<area shape="rect" id="node2" href="$structs__loot.html" title="s_loot" alt="" coords="5,5,61,32"/>
+<area shape="rect" id="node3" href="$structs__guardian.html" title="s_guardian" alt="" coords="87,5,172,32"/>
+</map>

@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1432291868 source:/home/etu/n/p1316910/LIF7_td/snake_v7/guardian.c
+	"guardian.h"
+
+1432291792 /home/etu/n/p1316910/LIF7_td/snake_v7/guardian.h
+	<stdio.h>
+	<stdlib.h>
+
+1432291789 /home/etu/n/p1316910/LIF7_td/snake_v7/snake.h
+	<stdio.h>
+	<stdlib.h>
+	"SDL/SDL.h"
+	"loot.h"
+	"guardian.h"
+
+1432289872 source:/home/etu/n/p1316910/LIF7_td/snake_v7/loot.c
+	"loot.h"
+
+1432291792 /home/etu/n/p1316910/LIF7_td/snake_v7/loot.h
+	<stdio.h>
+	<stdlib.h>
+
+1432289933 source:/home/etu/n/p1316910/LIF7_td/snake_v7/main.c
+	"snake.h"
+	"loot.h"
+	"guardian.h"
+	"sdl_game.h"
+	<time.h>
+	<unistd.h>
+
+1432289685 /home/etu/n/p1316910/LIF7_td/snake_v7/sdl_game.h
+	<stdio.h>
+	<stdlib.h>
+	"snake.h"
+
+1432289842 source:/home/etu/n/p1316910/LIF7_td/snake_v7/sdl_game.c
+	"sdl_game.h"
+
+1432288027 source:/home/etu/n/p1316910/LIF7_td/snake_v7/snake.c
+	"snake.h"
+
+1432305212 source:/home/etu/m/p1307818/LIF7/projet/snake_v7/guardian.c
+	"guardian.h"
+	<assert.h>
+
+1432305404 /home/etu/m/p1307818/LIF7/projet/snake_v7/guardian.h
+	<stdio.h>
+	<stdlib.h>
+
+1432306079 source:/home/etu/m/p1307818/LIF7/projet/snake_v7/main.c
+	"snake.h"
+	"loot.h"
+	"guardian.h"
+	"sdl_game.h"
+	<time.h>
+	<unistd.h>
+	<assert.h>
+
+1432305111 /home/etu/m/p1307818/LIF7/projet/snake_v7/snake.h
+	<stdio.h>
+	<stdlib.h>
+	"SDL/SDL.h"
+	"loot.h"
+	"guardian.h"
+
+1432306428 /home/etu/m/p1307818/LIF7/projet/snake_v7/loot.h
+	<stdio.h>
+	<stdlib.h>
+
+1432289686 /home/etu/m/p1307818/LIF7/projet/snake_v7/sdl_game.h
+	<stdio.h>
+	<stdlib.h>
+	"snake.h"
+
+1432305598 source:/home/etu/m/p1307818/LIF7/projet/snake_v7/sdl_game.c
+	"sdl_game.h"
+	<assert.h>
+
+1432306470 source:/home/etu/m/p1307818/LIF7/projet/snake_v7/snake.c
+	"snake.h"
+	<assert.h>
+

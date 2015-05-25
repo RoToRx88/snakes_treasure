@@ -1,0 +1,6 @@
+<map id="draw_map" name="draw_map">
+<area shape="rect" id="node2" href="$sdl__game_8c.html#adfc4fcfb4c0929fc678b2fe346b5e15c" title="applique une surface sur la fenêtre " alt="" coords="305,80,407,106"/>
+<area shape="rect" id="node3" href="$snake_8c.html#a9669d84e688f41b0355a86aa06f2d6fe" title="ajoute une vie au joueur " alt="" coords="155,29,237,56"/>
+<area shape="rect" id="node4" href="$snake_8c.html#a74649b487be7999de9d73f375bc72c0e" title="affiche chaque partie des 4 serpents. " alt="" coords="137,80,255,106"/>
+<area shape="rect" id="node5" href="$sdl__game_8c.html#ac9a110a9ee4351e7bc4d7dd2880243c0" title="affiche les butins non pris " alt="" coords="151,130,241,157"/>
+</map>
