@@ -131,7 +131,6 @@ int    sdl_Menu(t_Snake *snake)
   SDL_Flip(snake->surfaces[SCREEN]);
   while (SDL_WaitEvent(&event))
     {
-      printf("get event\n");
       switch(event.type)
         {
         case SDL_QUIT:
