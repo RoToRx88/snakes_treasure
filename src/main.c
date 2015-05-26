@@ -22,17 +22,17 @@ int main_loop(t_Snake *snake)
 	horloge_courante = (float)clock()/(float)CLOCKS_PER_SEC;
 	new_clock = (float)clock()/(float)CLOCKS_PER_SEC;
 	snake_Check_Guardian_Collision(snake);
-	if (new_clock - old_clock > 1.0)
+	if (new_clock - old_clock > 1.0) // décompte du chrono du jeu
 	  {
 	    snake->clock -= 1;
 	    old_clock = new_clock;
 	    printf("Temps restant: %d\n", snake->clock);
 	  }
-	if (snake->clock <= 0)
+	if (snake->clock <= 0) // verifie qu'il nous reste du temps pour jouer
 	  {
 	    sdl_Apply_Surface(0, 0, snake->surfaces[TIMEOUT], snake->surfaces[SCREEN]);
 	    SDL_Flip(snake->surfaces[SCREEN]);
-	    usleep(1500000);
+	    usleep(1500000); // programme en pause durant 1.5sec
 	    if (!sdl_Menu(snake))
 	      {
 		if (snake_Init_Values(snake)) return 1;
@@ -40,7 +40,7 @@ int main_loop(t_Snake *snake)
 	      }
 	    return 0;
 	  }
-	if (horloge_courante - horloge_precedente >= snake->clock_speed)
+	if (horloge_courante - horloge_precedente >= snake->clock_speed) // permet de faire avancer le serpent à chaque tic d'horloge
 	  {
 	    snake_Calc_Guardian_Pos(snake);
 	    rafraichissement = 1;
@@ -50,7 +50,7 @@ int main_loop(t_Snake *snake)
 	if (snake_Check_If_Win(snake) && snake->guardian_size < 8)
 	  {
 	    int i;
-	    
+
 	    sdl_Apply_Surface(0, 0, snake->surfaces[LEVELUP], snake->surfaces[SCREEN]);
 	    SDL_Flip(snake->surfaces[SCREEN]);
 	    usleep(1500000);
@@ -61,13 +61,13 @@ int main_loop(t_Snake *snake)
 	      snake->clock_speed -= 0.1;
 	    else
 	      snake->clock_speed -= 0.001;
-	    snake->clock = 30 + (snake->guardian_size * 2);
+	    snake->clock = 30 + (snake->guardian_size * 2); // premier niveau on a 30 secondes de chrono et après 30 + 2 * taille du serpent
 	    for (i = 0; i < 4; ++i)
 	      {
 		if (snake_Init_Guardian(snake, i)) {printf("[error] Error creating guardian;\n"); return 1;}
 	      }
 	  }
-	else if (snake_Check_If_Win(snake))
+	else if (snake_Check_If_Win(snake)) // Si on est au dernier niveau et qu'on gagne fin du jeu
 	  {
 	    sdl_Apply_Surface(0, 0, snake->surfaces[WIN], snake->surfaces[SCREEN]);
 	    SDL_Flip(snake->surfaces[SCREEN]);
@@ -116,7 +116,7 @@ int main_loop(t_Snake *snake)
 		main_loop(snake);
 	      }
 	    return 0;
-	    
+
 	  }
 	sdl_Draw_Map(snake);
       }
@@ -126,8 +126,8 @@ int main_loop(t_Snake *snake)
 int	main(int ac, char **av)
 {
   t_Snake	*snake;
-  
-  
+
+
   if (!(snake = malloc(sizeof(t_Snake)))) return 1;
   strcpy(snake->map[0], "##################");
   strcpy(snake->map[1], "#................#");

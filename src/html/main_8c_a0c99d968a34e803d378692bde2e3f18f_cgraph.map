@@ -1,23 +1,23 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$sdl__game_8c.html#adfc4fcfb4c0929fc678b2fe346b5e15c" title="applique une surface sur la fenêtre " alt="" coords="619,159,722,186"/>
-<area shape="rect" id="node3" href="$sdl__game_8c.html#a73aea31a65da0767a6db559429063bef" title="place les murs, le perso et les serpents sur le terrain " alt="" coords="277,146,360,172"/>
-<area shape="rect" id="node7" href="$sdl__game_8c.html#a2171379bf663a47715aa2445af1a5f05" title="initialisation du jeu " alt="" coords="114,691,177,718"/>
-<area shape="rect" id="node12" href="$main_8c.html#a39ab0a732571c744c0a9ec88bb5dce06" title="main_loop" alt="" coords="105,412,186,439"/>
-<area shape="rect" id="node14" href="$sdl__game_8c.html#a6eb11c5d325395bdde2542fe8b442dcf" title="affichage du menu " alt="" coords="291,235,346,262"/>
-<area shape="rect" id="node4" href="$snake_8c.html#a9669d84e688f41b0355a86aa06f2d6fe" title="ajoute une vie au joueur " alt="" coords="470,32,551,59"/>
-<area shape="rect" id="node5" href="$sdl__game_8c.html#ac9a110a9ee4351e7bc4d7dd2880243c0" title="affiche les butins non pris " alt="" coords="465,134,556,160"/>
-<area shape="rect" id="node6" href="$snake_8c.html#a74649b487be7999de9d73f375bc72c0e" title="affiche chaque partie des 4 serpents. " alt="" coords="451,184,570,211"/>
-<area shape="rect" id="node8" href="$sdl__game_8c.html#a7b2f5a9c5a651a3b097a745dad25202f" title="permet de charger des images .bmp " alt="" coords="275,742,363,768"/>
-<area shape="rect" id="node9" href="$sdl__game_8c.html#a1d5612433d95cd3c1ffb9c5b7f46543c" title="initialisation de la position du joueur, du nombre de vie, de la vitesse et la taille du serpent et d..." alt="" coords="277,691,361,718"/>
-<area shape="rect" id="node10" href="$snake_8c.html#a809bca25ad14e9ac5dd51f7a37d68cac" title="place les trésors et les vies " alt="" coords="461,603,561,630"/>
-<area shape="rect" id="node11" href="$snake_8c.html#a55402904d34b8a841ce5e409d7158ab6" title="initialise les serpents. " alt="" coords="463,679,558,706"/>
-<area shape="rect" id="node13" href="$snake_8c.html#a528fb7bf154c2c0c4cff61be11d26d9b" title="vérifie s&#39;il y a collision entre le joueur et les serpents. " alt="" coords="235,286,402,312"/>
-<area shape="rect" id="node15" href="$snake_8c.html#a603acf3ececc94d51be272bd900f3e2c" title="fait avancer chaque serpent " alt="" coords="253,336,384,363"/>
-<area shape="rect" id="node20" href="$snake_8c.html#ad0ceaa13f812ca89070bf949d35e25d1" title="regarde si tous les tresors ont été récupérés " alt="" coords="269,387,368,414"/>
-<area shape="rect" id="node21" href="$snake_8c.html#aabd2eb5a4ad97f17dac67aab5375ea18" title="déplace le personnage " alt="" coords="271,438,367,464"/>
-<area shape="rect" id="node22" href="$snake_8c.html#a81716c697d1174bcc2f757f6d761da54" title="passe au niveau suivant " alt="" coords="278,539,359,566"/>
-<area shape="rect" id="node16" href="$guardian_8c.html#abb58659995147538de75df129238bb08" title="déplacement du serpent 0 " alt="" coords="477,336,545,363"/>
-<area shape="rect" id="node17" href="$guardian_8c.html#abe0cf70e1991136623fc0b4343ea413e" title="déplacement du serpent 1 " alt="" coords="477,387,545,414"/>
-<area shape="rect" id="node18" href="$guardian_8c.html#a1b725e814f8d259d4fe5dea4ee70334d" title="déplacement du serpent 2 " alt="" coords="477,438,545,464"/>
-<area shape="rect" id="node19" href="$guardian_8c.html#ae4bdfbbf6f7cb9798bae868318b7588a" title="déplacement du serpent 3 " alt="" coords="477,286,545,312"/>
+<area shape="rect" id="node2" href="$main_8c.html#ae1c3cc7a6a3a5eb851a453c6db9ff81d" title="main_loop" alt="" coords="105,377,186,404"/>
+<area shape="rect" id="node4" href="$sdl__game_8c.html#a223434f2b12f9709704d82c5343b6fe2" title="applique une surface sur la fenêtre " alt="" coords="661,137,792,164"/>
+<area shape="rect" id="node5" href="$sdl__game_8c.html#af7013f89d884d7c58851d6d8f96fef3e" title="affichage du menu " alt="" coords="286,137,365,164"/>
+<area shape="rect" id="node17" href="$sdl__game_8c.html#a4ade64e6c4c165773df77d45bd518051" title="place les murs, le perso et les serpents sur le terrain " alt="" coords="271,188,380,214"/>
+<area shape="rect" id="node21" href="$sdl__game_8c.html#a9a59610998ae6959b5f62fab50e09e5a" title="initialisation du jeu " alt="" coords="113,672,177,698"/>
+<area shape="rect" id="node3" href="$snake_8c.html#af243fcea3c183f87c1d53fc85c95c23a" title="vérifie s&#39;il y a collision entre le joueur et les serpents. " alt="" coords="245,504,406,546"/>
+<area shape="rect" id="node6" href="$snake_8c.html#aeb26a65561e48c3e3c2dd2065abca32f" title="initialisation de la position du joueur, du nombre de vie, de la vitesse et la taille du serpent et d..." alt="" coords="261,672,390,698"/>
+<area shape="rect" id="node7" href="$snake_8c.html#a2bb9bc4489c2e4f169d753f1c233e93a" title="place les trésors et les vies " alt="" coords="464,652,613,678"/>
+<area shape="rect" id="node8" href="$snake_8c.html#a3ece52cb40207d1efa6d6d66df8a33ba" title="initialise les serpents. " alt="" coords="468,562,609,589"/>
+<area shape="rect" id="node9" href="$snake_8c.html#a02fb442e48374f372ad742d22071cc2b" title="fait avancer chaque serpent " alt="" coords="235,402,415,429"/>
+<area shape="rect" id="node14" href="$snake_8c.html#aa8ee6b13f1388c674c3db99c7f0a81fe" title="regarde si tous les tresors ont été récupérés " alt="" coords="252,352,399,378"/>
+<area shape="rect" id="node15" href="$snake_8c.html#a6d8cf4334806c131237005fac8dce3bc" title="déplace le personnage " alt="" coords="255,570,395,597"/>
+<area shape="rect" id="node16" href="$snake_8c.html#a553261e6a7321ce1e9f241d3af269427" title="passe au niveau suivant " alt="" coords="261,301,390,328"/>
+<area shape="rect" id="node10" href="$guardian_8c.html#a7bfbb13730b843e8e9f60eea9ec086b6" title="déplacement du serpent 0 " alt="" coords="505,492,573,518"/>
+<area shape="rect" id="node11" href="$guardian_8c.html#af5f46ae67630149f0d37a9e1e12487ef" title="déplacement du serpent 1 " alt="" coords="505,340,573,366"/>
+<area shape="rect" id="node12" href="$guardian_8c.html#aceac6bc5b0f9a91b5e3e0267bb4971e6" title="déplacement du serpent 2 " alt="" coords="505,390,573,417"/>
+<area shape="rect" id="node13" href="$guardian_8c.html#a25fb55f6269e1f6ec6b4748bc0f9f93b" title="déplacement du serpent 3 " alt="" coords="505,441,573,468"/>
+<area shape="rect" id="node18" href="$snake_8c.html#a5b3de9cf4910df4fbdf7a34db1a52cf1" title="ajoute une vie au joueur " alt="" coords="473,61,604,88"/>
+<area shape="rect" id="node19" href="$sdl__game_8c.html#ad384c083c6906cd8e111d0f6a8875f1c" title="affiche les butins non pris " alt="" coords="477,112,600,138"/>
+<area shape="rect" id="node20" href="$sdl__game_8c.html#a6b6e18316dec2a8e18e42a079d619fba" title="affiche chaque partie des 4 serpents. " alt="" coords="464,162,613,189"/>
+<area shape="rect" id="node22" href="$sdl__game_8c.html#ac7ab0f4cbc9c3b2286282bf159d44543" title="permet de charger des images .bmp " alt="" coords="267,722,384,749"/>
 </map>

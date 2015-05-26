@@ -69,38 +69,38 @@ $(document).ready(function(){initNavTree('sdl__game_8h_source.html','');});
 <a href="sdl__game_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _SDL_GAME_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># define _SDL_GAME_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"># include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"># include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="snake_8h.html">snake.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="sdl__game_8h.html#aac4473e6a6a4cdc11ed1f5110252a8ff">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__snake.html">s_snake</a> <a class="code" href="structs__snake.html">t_snake</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;SDL_Surface             *<a class="code" href="sdl__game_8h.html#a7b2f5a9c5a651a3b097a745dad25202f">load_image</a>(<span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sdl__game_8h.html#a8ab296dd84181c3393e2082777ccc350">apply_surface</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Surface *source, SDL_Surface *destination);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sdl__game_8h.html#ac9a110a9ee4351e7bc4d7dd2880243c0">display_loot</a>(<a class="code" href="structs__snake.html">t_snake</a> *snake) ;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">int</span> <a class="code" href="sdl__game_8h.html#a73aea31a65da0767a6db559429063bef">draw_map</a>(<a class="code" href="structs__snake.html">t_snake</a> *snake);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">int</span>   <a class="code" href="sdl__game_8h.html#a6eb11c5d325395bdde2542fe8b442dcf">menu</a> (<a class="code" href="structs__snake.html">t_snake</a> *snake);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">int</span>     <a class="code" href="sdl__game_8h.html#a2171379bf663a47715aa2445af1a5f05">init_sdl</a>(<a class="code" href="structs__snake.html">t_snake</a> *snake);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">int</span>     <a class="code" href="sdl__game_8h.html#a1d5612433d95cd3c1ffb9c5b7f46543c">init_values</a>(<a class="code" href="structs__snake.html">t_snake</a> *snake);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"># include &lt;SDL/SDL.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"># include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"># include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="snake_8h.html">snake.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="sdl__game_8h.html#a8d61d6d05804cea02c15b06d2e4bad96">    9</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs___snake.html">s_Snake</a> <a class="code" href="structs___snake.html">t_Snake</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;SDL_Surface             *<a class="code" href="sdl__game_8h.html#ac7ab0f4cbc9c3b2286282bf159d44543">sdl_Load_Image</a>(<span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sdl__game_8h.html#a1a783f1463eaf451b0b596fb19cb5ac1">sdl_Apply_Surface</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Surface *source, SDL_Surface *destination);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sdl__game_8h.html#ad384c083c6906cd8e111d0f6a8875f1c">sdl_Display_Loot</a>(<a class="code" href="structs___snake.html">t_Snake</a> *snake) ;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> <a class="code" href="sdl__game_8h.html#a4ade64e6c4c165773df77d45bd518051">sdl_Draw_Map</a>(<a class="code" href="structs___snake.html">t_Snake</a> *snake);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">int</span>   <a class="code" href="sdl__game_8h.html#af7013f89d884d7c58851d6d8f96fef3e">sdl_Menu</a> (<a class="code" href="structs___snake.html">t_Snake</a> *snake);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="sdl__game_8h.html#a6b6e18316dec2a8e18e42a079d619fba">sdl_Display_Guardian</a>(<a class="code" href="structs___snake.html">t_Snake</a> *snake);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">int</span>     <a class="code" href="sdl__game_8h.html#a9a59610998ae6959b5f62fab50e09e5a">sdl_Init</a>(<a class="code" href="structs___snake.html">t_Snake</a> *snake);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif //_SDL_GAME_H_</span></div>
-<div class="ttc" id="sdl__game_8h_html_ac9a110a9ee4351e7bc4d7dd2880243c0"><div class="ttname"><a href="sdl__game_8h.html#ac9a110a9ee4351e7bc4d7dd2880243c0">display_loot</a></div><div class="ttdeci">void display_loot(t_snake *snake)</div><div class="ttdoc">affiche les butins non pris </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00062">sdl_game.c:62</a></div></div>
-<div class="ttc" id="sdl__game_8h_html_a2171379bf663a47715aa2445af1a5f05"><div class="ttname"><a href="sdl__game_8h.html#a2171379bf663a47715aa2445af1a5f05">init_sdl</a></div><div class="ttdeci">int init_sdl(t_snake *snake)</div><div class="ttdoc">initialisation du jeu </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00161">sdl_game.c:161</a></div></div>
-<div class="ttc" id="sdl__game_8h_html_a8ab296dd84181c3393e2082777ccc350"><div class="ttname"><a href="sdl__game_8h.html#a8ab296dd84181c3393e2082777ccc350">apply_surface</a></div><div class="ttdeci">void apply_surface(int x, int y, SDL_Surface *source, SDL_Surface *destination)</div><div class="ttdoc">applique une surface sur la fenêtre </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00042">sdl_game.c:42</a></div></div>
-<div class="ttc" id="sdl__game_8h_html_a7b2f5a9c5a651a3b097a745dad25202f"><div class="ttname"><a href="sdl__game_8h.html#a7b2f5a9c5a651a3b097a745dad25202f">load_image</a></div><div class="ttdeci">SDL_Surface * load_image(char *filename)</div><div class="ttdoc">permet de charger des images .bmp </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00014">sdl_game.c:14</a></div></div>
-<div class="ttc" id="sdl__game_8h_html_a73aea31a65da0767a6db559429063bef"><div class="ttname"><a href="sdl__game_8h.html#a73aea31a65da0767a6db559429063bef">draw_map</a></div><div class="ttdeci">int draw_map(t_snake *snake)</div><div class="ttdoc">place les murs, le perso et les serpents sur le terrain </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00087">sdl_game.c:87</a></div></div>
-<div class="ttc" id="structs__snake_html"><div class="ttname"><a href="structs__snake.html">s_snake</a></div><div class="ttdef"><b>Definition:</b> <a href="snake_8h_source.html#l00046">snake.h:46</a></div></div>
-<div class="ttc" id="sdl__game_8h_html_a6eb11c5d325395bdde2542fe8b442dcf"><div class="ttname"><a href="sdl__game_8h.html#a6eb11c5d325395bdde2542fe8b442dcf">menu</a></div><div class="ttdeci">int menu(t_snake *snake)</div><div class="ttdoc">affichage du menu </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00124">sdl_game.c:124</a></div></div>
-<div class="ttc" id="sdl__game_8h_html_a1d5612433d95cd3c1ffb9c5b7f46543c"><div class="ttname"><a href="sdl__game_8h.html#a1d5612433d95cd3c1ffb9c5b7f46543c">init_values</a></div><div class="ttdeci">int init_values(t_snake *snake)</div><div class="ttdoc">initialisation de la position du joueur, du nombre de vie, de la vitesse et la taille du serpent et d...</div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00262">sdl_game.c:262</a></div></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif //_SDL_GAME_H_</span></div>
+<div class="ttc" id="sdl__game_8h_html_a9a59610998ae6959b5f62fab50e09e5a"><div class="ttname"><a href="sdl__game_8h.html#a9a59610998ae6959b5f62fab50e09e5a">sdl_Init</a></div><div class="ttdeci">int sdl_Init(t_Snake *snake)</div><div class="ttdoc">initialisation du jeu </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00185">sdl_game.c:185</a></div></div>
+<div class="ttc" id="sdl__game_8h_html_a4ade64e6c4c165773df77d45bd518051"><div class="ttname"><a href="sdl__game_8h.html#a4ade64e6c4c165773df77d45bd518051">sdl_Draw_Map</a></div><div class="ttdeci">int sdl_Draw_Map(t_Snake *snake)</div><div class="ttdoc">place les murs, le perso et les serpents sur le terrain </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00087">sdl_game.c:87</a></div></div>
+<div class="ttc" id="sdl__game_8h_html_ad384c083c6906cd8e111d0f6a8875f1c"><div class="ttname"><a href="sdl__game_8h.html#ad384c083c6906cd8e111d0f6a8875f1c">sdl_Display_Loot</a></div><div class="ttdeci">void sdl_Display_Loot(t_Snake *snake)</div><div class="ttdoc">affiche les butins non pris </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00062">sdl_game.c:62</a></div></div>
+<div class="ttc" id="sdl__game_8h_html_af7013f89d884d7c58851d6d8f96fef3e"><div class="ttname"><a href="sdl__game_8h.html#af7013f89d884d7c58851d6d8f96fef3e">sdl_Menu</a></div><div class="ttdeci">int sdl_Menu(t_Snake *snake)</div><div class="ttdoc">affichage du menu </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00124">sdl_game.c:124</a></div></div>
+<div class="ttc" id="sdl__game_8h_html_ac7ab0f4cbc9c3b2286282bf159d44543"><div class="ttname"><a href="sdl__game_8h.html#ac7ab0f4cbc9c3b2286282bf159d44543">sdl_Load_Image</a></div><div class="ttdeci">SDL_Surface * sdl_Load_Image(char *filename)</div><div class="ttdoc">permet de charger des images .bmp </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00014">sdl_game.c:14</a></div></div>
+<div class="ttc" id="sdl__game_8h_html_a6b6e18316dec2a8e18e42a079d619fba"><div class="ttname"><a href="sdl__game_8h.html#a6b6e18316dec2a8e18e42a079d619fba">sdl_Display_Guardian</a></div><div class="ttdeci">void sdl_Display_Guardian(t_Snake *snake)</div><div class="ttdoc">affiche chaque partie des 4 serpents. </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00158">sdl_game.c:158</a></div></div>
+<div class="ttc" id="structs___snake_html"><div class="ttname"><a href="structs___snake.html">s_Snake</a></div><div class="ttdef"><b>Definition:</b> <a href="snake_8h_source.html#l00047">snake.h:47</a></div></div>
+<div class="ttc" id="sdl__game_8h_html_a1a783f1463eaf451b0b596fb19cb5ac1"><div class="ttname"><a href="sdl__game_8h.html#a1a783f1463eaf451b0b596fb19cb5ac1">sdl_Apply_Surface</a></div><div class="ttdeci">void sdl_Apply_Surface(int x, int y, SDL_Surface *source, SDL_Surface *destination)</div><div class="ttdoc">applique une surface sur la fenêtre </div><div class="ttdef"><b>Definition:</b> <a href="sdl__game_8c_source.html#l00042">sdl_game.c:42</a></div></div>
 <div class="ttc" id="snake_8h_html"><div class="ttname"><a href="snake_8h.html">snake.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('sdl__game_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="sdl__game_8h.html">sdl_game.h</a></li>
-    <li class="footer">Généré le Vendredi 22 Mai 2015 17:13:29 pour SUPERFACT par
+    <li class="footer">Généré le Mardi 26 Mai 2015 09:53:48 pour SUPERFACT par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

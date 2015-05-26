@@ -1,0 +1,6 @@
+<map id="sdl_Init" name="sdl_Init">
+<area shape="rect" id="node2" href="$sdl__game_8c.html#ac7ab0f4cbc9c3b2286282bf159d44543" title="permet de charger des images .bmp " alt="" coords="124,5,241,32"/>
+<area shape="rect" id="node3" href="$snake_8c.html#aeb26a65561e48c3e3c2dd2065abca32f" title="initialisation de la position du joueur, du nombre de vie, de la vitesse et la taille du serpent et d..." alt="" coords="118,56,247,83"/>
+<area shape="rect" id="node4" href="$snake_8c.html#a2bb9bc4489c2e4f169d753f1c233e93a" title="place les trésors et les vies " alt="" coords="296,31,445,57"/>
+<area shape="rect" id="node5" href="$snake_8c.html#a3ece52cb40207d1efa6d6d66df8a33ba" title="initialise les serpents. " alt="" coords="300,81,441,108"/>
+</map>

@@ -94,7 +94,7 @@ void        snake_Move_Player(t_Snake *snake, int motion);
 
 /**
 @brief initialise les serpents.
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 @param i entier qui prend comme valeur 0, 1, 2, 3 qui correspond au différent
 
 snake_Init_Guardian initialise les 4 serpents au milieu du terrain.
@@ -105,7 +105,7 @@ int			snake_Init_Guardian(t_Snake *snake, int i);
 
 /**
 @brief vérifie s'il y a collision entre le joueur et les serpents.
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 
 snake_Check_Guardian_Collision vérifie la position du joueur par rapport à la position des serpents, et si elles sont semblables, la vie du personnage diminue de 1.
 
@@ -126,7 +126,7 @@ void    snake_Calc_Guardian_Pos(t_Snake *snake);
 
 /**
 @brief place les trésors et les vies
-@param snake est un pointeur de structure struct t_Snake
+@param snake est un pointeur sur t_Snake
 
 snake_Generate_Loot place les trésors et les vies dans les salles
 
@@ -137,9 +137,9 @@ void	snake_Generate_Loot(t_Snake *snake);
 
 /**
 @brief ajoute une vie au player
-@param snake est un pointeur sur struct t_Snake
+@param snake est un pointeur sur t_Snake
 
-snake_Check_Life ajoute incrémente la vie du player de 1 si sa position concorde avec celle de la life.
+snake_Check_Life incrémente la vie du player de 1 si sa position concorde avec celle de la life.
 @return none
 */
 

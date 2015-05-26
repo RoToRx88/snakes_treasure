@@ -6,7 +6,7 @@
 @param filename chaine de caractère (nom de fichier)
 
 
-SDL_Surface charge une image .bmp
+SDL_Surface charge une image .bmp dans la ram puis l'optimise.
 
 @return optimizedImage
 */
@@ -34,7 +34,7 @@ SDL_Surface *sdl_Load_Image(char *filename)
 @param source pointeur sur SDL_Surface
 @param destination pointeur sur SDL_Surface
 
-sdl_Apply_Surface applique une surface sur la fenêtre
+sdl_Apply_Surface met la surface source sur la surface destination aux coordonnées x et y
 
 @return none
 */
@@ -116,7 +116,7 @@ int sdl_Draw_Map(t_Snake *snake)
 @brief affichage du menu
 @param snake est un pointeur sur t_Snake
 
-sdl_Menu affiche le menu. La surface du fond "BACKROUND" sera appliqué à la fenetre avec par dessus le menu (proposition Play ou Quit)
+sdl_Menu affiche le menu sur SCREEN ( affichage des propositions Play ou Quit)
 
 @return 0
 */
@@ -158,7 +158,7 @@ sdl_Display_Guardian affiche partie par partie (en fonction de la taille du serp
 void		sdl_Display_Guardian(t_Snake *snake)
 {
   assert(snake != NULL); // le jeu ne peut pas être nul
-  
+
   int		i = -1;
   t_Guardian	*n;
 

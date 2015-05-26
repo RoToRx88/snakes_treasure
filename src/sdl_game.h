@@ -13,7 +13,8 @@ typedef struct s_Snake t_Snake;
 @param filename chaine de caractère (nom de fichier)
 
 
-SDL_Surface charge une image .bmp
+SDL_Surface charge une image .bmp dans la ram puis l'optimise.
+
 
 @return none
 */
@@ -28,7 +29,7 @@ SDL_Surface		*sdl_Load_Image(char *filename);
 @param source pointeur sur SDL-Surface
 @param destination pointeur sur SDL-Surface
 
-sdl_Apply_Surface applique une surface sur la fenêtre
+sdl_Apply_Surface met la surface source sur la surface destination aux coordonnées x et y
 
 @return none
 */
@@ -62,7 +63,7 @@ int sdl_Draw_Map(t_Snake *snake);
 @brief affichage du menu
 @param snake est un pointeur de structure t_Snake
 
-sdl_Menu affiche le menu. La surface du fond BACKROUND0 sera appliqué à la fenetre avec par dessus le menu (proposition Play ou Quit).
+sdl_Menu affiche le menu sur SCREEN ( affichage des propositions Play ou Quit)
 
 @return 0
 */

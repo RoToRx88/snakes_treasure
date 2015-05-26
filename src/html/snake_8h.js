@@ -1,12 +1,12 @@
 var snake_8h =
 [
-    [ "s_snake", "structs__snake.html", "structs__snake" ],
+    [ "s_Snake", "structs___snake.html", "structs___snake" ],
     [ "X_DEFAULT", "snake_8h.html#a8bf5737c897eb299ed7495bcec41d1dc", null ],
     [ "Y_DEFAULT", "snake_8h.html#a1962b6e8fb590a86a33314724b4dff9a", null ],
-    [ "t_snake", "snake_8h.html#a0d9165b6df6138bda67f86ff78571647", null ],
+    [ "t_Snake", "snake_8h.html#a6f843dd69614e98655faab9317b7f525", null ],
     [ "SCREEN", "snake_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf2a9da294a4a62d55f04725d7efbb6ac", null ],
     [ "WALL", "snake_8h.html#a06fc87d81c62e9abb8790b6e5713c55bafca2faad41310c7e71ec303ef789c53a", null ],
-    [ "PACMAN", "snake_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba6c3e87a9198a1e2acc74b59d20e20ea4", null ],
+    [ "PLAYER", "snake_8h.html#a06fc87d81c62e9abb8790b6e5713c55bade5dc3e0dbd007d995ed3e37bde5ce7e", null ],
     [ "SNAKE", "snake_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba7d71275d46953bd71d2c6b11e219ee24", null ],
     [ "BACKGROUND", "snake_8h.html#a06fc87d81c62e9abb8790b6e5713c55baa44b734476c2f3d073ee7aca08660a0e", null ],
     [ "BLUE_ORBE", "snake_8h.html#a06fc87d81c62e9abb8790b6e5713c55baccf669d47fb3e489b77e213bddff73d3", null ],
@@ -23,13 +23,13 @@ var snake_8h =
     [ "GO_RIGHT", "snake_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a53ba49606d14df61cb09af66085fd443", null ],
     [ "ORBE", "snake_8h.html#a99fb83031ce9923c84392b4e92f956b5a16cfb9017270a0f96a8c32ed2071a2c0", null ],
     [ "LIFE", "snake_8h.html#a99fb83031ce9923c84392b4e92f956b5a0bbfc7cff42950a3a2f202bb44f27afb", null ],
-    [ "calc_guardian_pos", "snake_8h.html#a603acf3ececc94d51be272bd900f3e2c", null ],
-    [ "cheat_win", "snake_8h.html#a81716c697d1174bcc2f757f6d761da54", null ],
-    [ "check_guardian_collision", "snake_8h.html#a528fb7bf154c2c0c4cff61be11d26d9b", null ],
-    [ "check_if_win", "snake_8h.html#ad0ceaa13f812ca89070bf949d35e25d1", null ],
-    [ "check_life", "snake_8h.html#a9669d84e688f41b0355a86aa06f2d6fe", null ],
-    [ "display_guardian", "snake_8h.html#a74649b487be7999de9d73f375bc72c0e", null ],
-    [ "generate_loot", "snake_8h.html#a809bca25ad14e9ac5dd51f7a37d68cac", null ],
-    [ "init_guardian", "snake_8h.html#a4c68e2a4279de52b297ae66a1f946097", null ],
-    [ "move_player", "snake_8h.html#a44dbbc8ed85a020fc1fc5853aed9390c", null ]
+    [ "snake_Calc_Guardian_Pos", "snake_8h.html#a02fb442e48374f372ad742d22071cc2b", null ],
+    [ "snake_Cheat_Win", "snake_8h.html#a553261e6a7321ce1e9f241d3af269427", null ],
+    [ "snake_Check_Guardian_Collision", "snake_8h.html#af243fcea3c183f87c1d53fc85c95c23a", null ],
+    [ "snake_Check_If_Win", "snake_8h.html#aa8ee6b13f1388c674c3db99c7f0a81fe", null ],
+    [ "snake_Check_Life", "snake_8h.html#a5b3de9cf4910df4fbdf7a34db1a52cf1", null ],
+    [ "snake_Generate_Loot", "snake_8h.html#a2bb9bc4489c2e4f169d753f1c233e93a", null ],
+    [ "snake_Init_Guardian", "snake_8h.html#adc445ddd48c69651548c3292fa60b4f2", null ],
+    [ "snake_Init_Values", "snake_8h.html#aeb26a65561e48c3e3c2dd2065abca32f", null ],
+    [ "snake_Move_Player", "snake_8h.html#a9523c7df77761476f6374a104ce12767", null ]
 ];

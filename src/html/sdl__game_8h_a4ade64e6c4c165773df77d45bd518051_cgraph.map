@@ -1,0 +1,6 @@
+<map id="sdl_Draw_Map" name="sdl_Draw_Map">
+<area shape="rect" id="node2" href="$sdl__game_8c.html#a223434f2b12f9709704d82c5343b6fe2" title="applique une surface sur la fenêtre " alt="" coords="360,25,491,52"/>
+<area shape="rect" id="node3" href="$sdl__game_8c.html#a6b6e18316dec2a8e18e42a079d619fba" title="affiche chaque partie des 4 serpents. " alt="" coords="163,25,312,52"/>
+<area shape="rect" id="node4" href="$sdl__game_8c.html#ad384c083c6906cd8e111d0f6a8875f1c" title="affiche les butins non pris " alt="" coords="176,76,299,103"/>
+<area shape="rect" id="node5" href="$snake_8c.html#a5b3de9cf4910df4fbdf7a34db1a52cf1" title="ajoute une vie au joueur " alt="" coords="172,127,303,153"/>
+</map>

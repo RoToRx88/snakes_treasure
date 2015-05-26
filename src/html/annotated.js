@@ -1,6 +1,6 @@
 var annotated =
 [
-    [ "s_guardian", "structs__guardian.html", "structs__guardian" ],
-    [ "s_loot", "structs__loot.html", "structs__loot" ],
-    [ "s_snake", "structs__snake.html", "structs__snake" ]
+    [ "s_Guardian", "structs___guardian.html", "structs___guardian" ],
+    [ "s_Loot", "structs___loot.html", "structs___loot" ],
+    [ "s_Snake", "structs___snake.html", "structs___snake" ]
 ];

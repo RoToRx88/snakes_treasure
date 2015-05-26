@@ -3,7 +3,7 @@
 
 /**
 @brief regarde si tous les tresors ont été récupérés
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 
 snake_Check_If_Win renvoi 1 si tous les tresors ont été récupéré, 0 sinon
 
@@ -25,7 +25,7 @@ int     snake_Check_If_Win(t_Snake *snake)
 
 /**
 @brief passe au niveau suivant
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 
 snake_Cheat_Win prend tous les trésors à la place du joueur afin de passer au niveau suivant (pour une démo par exemple)
 
@@ -56,7 +56,7 @@ void	snake_Cheat_Win(t_Snake *snake)
 
 /**
 @brief déplace le personnage
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 @param motion est un entier
 
 snake_Move_Player déplace le personnage selon la touche saisit par l'utilisateur sans qu'il puisse rentrer dans les murs
@@ -88,7 +88,7 @@ void	snake_Move_Player(t_Snake *snake,const int motion)
 
 /**
 @brief vérifie s'il y a collision entre le joueur et les serpents.
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 
 snake_Check_Guardian_Collision vérifie la position du joueur par rapport à la position des serpents, et si elles sont semblables, la vie du personnage diminue de 1.
 
@@ -121,7 +121,7 @@ int		snake_Check_Guardian_Collision(t_Snake *snake)
 
 /**
 @brief initialise les serpents.
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 @param i entier qui prend comme valeur 0, 1, 2, 3 qui correspond au différent
 
 snake_Init_Guardian initialise les 4 serpents au milieu du terrain.
@@ -224,7 +224,7 @@ int		snake_Init_Guardian(t_Snake *snake, const int i)
 
 /**
 @brief place les trésors et les vies
-@param snake est un pointeur de structure t_Snake
+@param snake est un pointeur sur t_Snake
 
 snake_Generate_Loot place les trésors et les vies dans les salles
 

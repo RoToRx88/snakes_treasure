@@ -1,5 +1,5 @@
 var loot_8h =
 [
-    [ "s_loot", "structs__loot.html", "structs__loot" ],
-    [ "t_loot", "loot_8h.html#a1f1c9a5a18f5da46e7525d365330625b", null ]
+    [ "s_Loot", "structs___loot.html", "structs___loot" ],
+    [ "t_Loot", "loot_8h.html#a4c81594c0a75c5661f743219fc6bfb9a", null ]
 ];
