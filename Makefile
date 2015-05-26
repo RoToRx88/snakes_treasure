@@ -7,8 +7,7 @@ NAME	= bin/snake
 
 OBJ	= $(SRC:.c=.o)
 
-#FLAG	= -Wextra -Werror -Wall -pthread -pedantic -ansi -O3
-FLAG	= -O3 -lSDL
+FLAG	= -O3 `sdl-config --libs`
 
 all: $(NAME)
 
