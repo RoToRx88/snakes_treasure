@@ -1,6 +1,7 @@
 #ifndef _SDL_GAME_H_
 # define _SDL_GAME_H_
 
+# include <SDL/SDL.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include "snake.h"

@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1432620845 source:/home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/guardian.c
+	"guardian.h"
+	<assert.h>
+
+1432620845 /home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/guardian.h
+	<stdio.h>
+	<stdlib.h>
+
+1432620846 source:/home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/main.c
+	"snake.h"
+	"loot.h"
+	"guardian.h"
+	"sdl_game.h"
+	<time.h>
+	<unistd.h>
+	<assert.h>
+
+1432620846 /home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/snake.h
+	<stdio.h>
+	<stdlib.h>
+	"SDL/SDL.h"
+	"loot.h"
+	"guardian.h"
+
+1432620846 /home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/loot.h
+	<stdio.h>
+	<stdlib.h>
+
+1432620977 /home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/sdl_game.h
+	<SDL/SDL.h>
+	<stdio.h>
+	<stdlib.h>
+	"snake.h"
+
+1432620846 source:/home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/sdl_game.c
+	"sdl_game.h"
+	<assert.h>
+
+1432620846 source:/home/etu/n/p1316910/LIF7_td/version_finale/snakes_treasure/src/snake.c
+	"snake.h"
+	<assert.h>
+
