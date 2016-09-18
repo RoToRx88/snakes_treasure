@@ -4,12 +4,12 @@ Le but de ce jeu est de récupérer tous les trésors gardés par des serpents s
 (Auteurs : Marion NAUCHE, Gwenaëlle BARRE et Maëlle MORANGES)
 
 ## Compilation 
-$ make
+`$ make`
 
 
 ## Execution
-./snake
+`./snake`
 
 
 ## Generation de la documentation
-.././src/html/index.html
+`.././src/html/index.html`
