@@ -12,4 +12,4 @@ Le but de ce jeu est de récupérer tous les trésors gardés par des serpents s
 
 
 ## Generation de la documentation
-`.././src/html/index.html`
+`./src/html/index.html`
